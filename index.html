@@ -1,18 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>StrukdatF</title>
+  <meta charset="UTF-8">
+  <title>StrukdatF Notebook</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* sidebar */
+    .sidebar {
+      width: 250px;
+      background: #151B54;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    .sidebar a:hover {
+      background: #2c347a;
+    }
+
+    /* content */
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #151B54;
+    }
+  </style>
+
 </head>
+
 <body>
 
-  <h1>Struktur Data - StrukdatF</h1>
+  <div class="sidebar">
+    <h2> Struktur Data F</h2>
+    <p>Materi:</p>
 
-  <h3>Materi:</h3>
+    <a href="materi/StackQueue.html">Stack & Queue</a>
+    <a href="materi/PrefixInfixPostfix.html">Prefix - Infix - Postfix</a>
+  </div>
 
-  <ul>
-    <li><a href="materi/StackQueue.html">Stack Dan Queue</a></li>
-    <li><a href="materi/PrefixInfixPostfix.html">Prefix, Infix, Postfix</a></li>
-  </ul>
+  <div class="content">
+    <h1>Welcome to StrukdatF Notebook</h1>
+    <p>
+      Halo 👋 ini adalah website materi Struktur Data.
+      Silakan pilih materi di sidebar.
+    </p>
+  </div>
 
 </body>
 </html>
