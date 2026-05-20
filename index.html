@@ -1,71 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Materi Sruktur Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Struktur Data Notebook</title>
 
   <style>
-    body {
-      margin: 0;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
       font-family: Arial, sans-serif;
-      display: flex;
-      height: 100vh;
+      display:flex;
+      background:#FFF0BE;
+      color:#333;
     }
 
-    /* sidebar */
-    .sidebar {
-      width: 250px;
-      background: #ffe6f3;
-      color: rgb(255, 0, 157);
-      padding: 20px;
+    /* SIDEBAR */
+
+    .sidebar{
+      width:270px;
+      height:100vh;
+      background:#FF9A86;
+      color:white;
+      padding:25px;
+      position:fixed;
+      overflow:auto;
+      box-shadow:4px 0 10px rgba(0,0,0,0.1);
     }
 
-    .sidebar h2 {
-      font-size: 18px;
+    .sidebar h2{
+      margin-bottom:10px;
+      font-size:24px;
     }
 
-    .sidebar a {
-      display: block;
-      color: rgb(255, 0, 157);
-      text-decoration: none;
-      margin: 10px 0;
-      padding: 8px;
-      border-radius: 5px;
+    .sidebar p{
+      color:#fff5f2;
+      margin-bottom:25px;
+      font-size:14px;
     }
 
-    .sidebar a:hover {
-      background: #ff96cc;
+    .sidebar a{
+      display:block;
+      text-decoration:none;
+      color:white;
+      padding:12px;
+      margin-bottom:12px;
+      border-radius:12px;
+      transition:0.3s;
+      background:#FFB399;
+      font-weight:bold;
     }
 
-    /* content */
-    .content {
-      flex: 1;
-      padding: 40px;
+    .sidebar a:hover{
+      background:#FFD6A6;
+      color:#333;
+      transform:translateX(5px);
     }
 
-    h1 {
-      color: #151B54;
+    /* CONTENT */
+
+    .content{
+      margin-left:270px;
+      padding:50px;
+      width:100%;
     }
+
+    .hero{
+      background:white;
+      padding:40px;
+      border-radius:25px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      border:3px solid #FFD6A6;
+    }
+
+    .hero h1{
+      font-size:40px;
+      margin-bottom:15px;
+      color:#FF9A86;
+    }
+
+    .hero p{
+      font-size:18px;
+      line-height:1.8;
+      color:#555;
+    }
+
+    .materi-box{
+      margin-top:35px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      transition:0.3s;
+      border:2px solid #FFD6A6;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      color:#FF9A86;
+    }
+
+    .card p{
+      color:#666;
+      line-height:1.6;
+    }
+
+    .card a{
+      text-decoration:none;
+      color:#FF9A86;
+      font-weight:bold;
+    }
+
+    .card a:hover{
+      color:#FFB399;
+    }
+
   </style>
 
 </head>
 
 <body>
 
-  <div class="sidebar">
-    <h2> Materi Struktur Data </h2>
-    
+  <!-- SIDEBAR -->
 
-    <a href="materi/StackQueue.html">Stack & Queue</a>
-    <a href="materi/PrefixInfixPostfix.html">Prefix - Infix - Postfix</a>
+  <div class="sidebar">
+
+    <h2>Struktur Data</h2>
+
+    <p>Website Materi Struktur Data</p>
+
+    <a href="materi/StackQueue.html">
+      Stack & Queue
+    </a>
+
+    <a href="materi/PrefixInfixPostfix.html">
+      Prefix Infix Postfix
+    </a>
+    <a href="materi/Sorting.html">Sorting
+    </a>
+    <a href="materi/Searching.html">Searching
+    </a>
+
   </div>
 
+
+  <!-- CONTENT -->
+
   <div class="content">
-    <h1>Welcome to StrukdatF Notebook</h1>
-    <p>
-      Halo ini adalah website materi Struktur Data.
-      Silakan pilih materi yang ingin kamu baca! 
-    </p>
+
+    <div class="hero">
+
+      <h1>Welcome to Struktur Data Notebook </h1>
+
+      <p>
+        Halo, selamat datang di website Struktur Data.
+        Website ini berisi kumpulan materi yang kita pelajari.
+      </p>
+
+    </div>
+    </div>
+
   </div>
 
 </body>
