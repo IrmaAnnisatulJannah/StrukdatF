@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PraktikumPertemuan3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Untitled3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7510,49 +7510,63 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=47765fe3-68ac-44ac-ade3-0f90acd7eee3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Unorder-List">Unorder List<a class="anchor-link" href="#Unorder-List">¶</a></h1><p>Search Cari angka tertentu 18</p>
+<h1 id="1)-jika-ada-disisipkan-setelah-yang-dicari-ada">1) jika ada disisipkan setelah yang dicari ada<a class="anchor-link" href="#1)-jika-ada-disisipkan-setelah-yang-dicari-ada">¶</a></h1><p>Head--&gt; 7--&gt; 18 --&gt; 6 --&gt; None  Head--&gt; 7--&gt; 18 --&gt; 18 --&gt; 6 --&gt; None</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6a0e6c3b-39bf-47a6-aeec-2dc130bfba57">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Queue</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">queue</span> <span class="p">():</span>
-  <span class="n">q</span> <span class="o">=</span> <span class="p">[]</span>
-  <span class="k">return</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">enqueue</span> <span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-  <span class="n">q</span><span class="o">.</span><span class="n">append</span> <span class="p">(</span><span class="n">data</span><span class="p">)</span>
-  <span class="k">return</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">dequeue</span> <span class="p">(</span><span class="n">q</span><span class="p">):</span>
-  <span class="n">data</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-  <span class="k">return</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">isEmpty</span> <span class="p">(</span><span class="n">q</span><span class="p">):</span>
-  <span class="k">return</span> <span class="p">(</span><span class="n">q</span><span class="o">==</span><span class="p">[])</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">antrian</span> <span class="o">=</span> <span class="n">queue</span><span class="p">()</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">antrian</span><span class="p">,</span> <span class="s2">"A"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">antrian</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="p">:</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">antrian</span><span class="p">)</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">dequeue</span><span class="p">(</span><span class="n">antrian</span><span class="p">)</span>
-<span class="c1">#print(antrian)</span>
-<span class="n">dequeue</span><span class="p">(</span><span class="n">antrian</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">antrian</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">antrian</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="c1"># Membuat Linked List</span>
+<span class="n">head</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">node2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">node3</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">head</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node2</span>
+<span class="n">node2</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node3</span>
+
+
+<span class="c1"># Search cari angka 18</span>
+<span class="n">cari</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">head</span>
+<span class="k">while</span> <span class="n">temp</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+
+    <span class="c1"># jika ditemukan</span>
+    <span class="k">if</span> <span class="n">temp</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">cari</span><span class="p">:</span>
+        <span class="c1"># sisipkan setelah 18</span>
+        <span class="n">baru</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+        <span class="n">baru</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+        <span class="n">temp</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">baru</span>
+        <span class="k">break</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+
+
+<span class="c1"># Tampilkan hasil</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">head</span>
+<span class="k">while</span> <span class="n">temp</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">temp</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" --&gt; "</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"None"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7565,33 +7579,79 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>['A', 'B']
-['A']
+<pre>7 --&gt; 18 --&gt; 18 --&gt; 6 --&gt; None
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f7c60958-8aa0-4c83-8d9d-714f25bcf3d2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="2)-kalau-tidak-disisipkan-di-akhir">2) kalau tidak disisipkan di akhir<a class="anchor-link" href="#2)-kalau-tidak-disisipkan-di-akhir">¶</a></h1><p>Head--&gt; 7--&gt; 10 --&gt; 6 --&gt; None  Head--&gt; 7--&gt; 10 --&gt; 6 --&gt; 18 --&gt; None
+insert 18 --&gt; menggabungkan 18 Link List
+6 sambung 18 (setnext = temp)</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=800b6e0c-5cdf-4a07-94ea-b2b6cbf582f2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#challenge</span>
-<span class="n">antre</span> <span class="o">=</span> <span class="n">queue</span><span class="p">()</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">antre</span><span class="p">,</span> <span class="s2">"irma"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">antre</span><span class="p">,</span> <span class="s2">"annisatul"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">antre</span><span class="p">,</span> <span class="s2">"jannah"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">antre</span><span class="p">)</span>
-<span class="n">antrean</span> <span class="o">=</span> <span class="n">queue</span><span class="p">()</span>
-<span class="k">while</span> <span class="ow">not</span> <span class="n">isEmpty</span><span class="p">(</span><span class="n">antre</span><span class="p">):</span>
-  <span class="n">a</span> <span class="o">=</span> <span class="n">dequeue</span><span class="p">(</span><span class="n">antre</span><span class="p">)</span>
-  <span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="s2">"annisatul"</span><span class="p">:</span>
-    <span class="n">enqueue</span><span class="p">(</span><span class="n">antrean</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">antrean</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="p">:</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="c1"># Membuat Linked List</span>
+<span class="n">head</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">node2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">node3</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">head</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node2</span>
+<span class="n">node2</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node3</span>
+
+
+<span class="c1"># Insert 18</span>
+<span class="n">cari</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">head</span>
+<span class="n">ketemu</span> <span class="o">=</span> <span class="kc">False</span>
+
+
+<span class="c1"># Search</span>
+<span class="k">while</span> <span class="n">temp</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">temp</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">cari</span><span class="p">:</span>
+        <span class="n">ketemu</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">break</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+
+
+<span class="c1"># Jika tidak ada disisipkan di akhir</span>
+<span class="k">if</span> <span class="n">ketemu</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="k">while</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+
+    <span class="c1"># 6 sambung 18</span>
+    <span class="n">temp</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+
+
+<span class="c1"># Tampilkan hasil</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">head</span>
+<span class="k">while</span> <span class="n">temp</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">temp</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" --&gt; "</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"None"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7604,43 +7664,78 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>['irma', 'annisatul', 'jannah']
-['irma', 'jannah']
+<pre>7 --&gt; 10 --&gt; 6 --&gt; 18 --&gt; None
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a5b61a7e-eb66-424d-957d-27ba8919da77">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="OrderList">OrderList<a class="anchor-link" href="#OrderList">¶</a></h1><p>iterasi</p>
+<ul>
+<li>cari &lt; sekarang --&gt; lebih besar berhenti</li>
+</ul>
+<h1 id="1)-jika-ada---%3E-sisipkan-setelah-yang-dicari">1) jika ada --&gt; sisipkan setelah yang dicari<a class="anchor-link" href="#1)-jika-ada---%3E-sisipkan-setelah-yang-dicari">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=07d13904-3fe0-4ceb-a558-62d900eac499">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">deque</span>
-<span class="c1">#challenge</span>
-<span class="n">detik</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">an</span> <span class="o">=</span> <span class="n">queue</span><span class="p">()</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="s2">"A"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="s2">"D"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="s2">"E"</span><span class="p">)</span>
-<span class="n">target</span> <span class="o">=</span> <span class="s2">"D"</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-  <span class="n">cari</span> <span class="o">=</span> <span class="n">dequeue</span><span class="p">(</span><span class="n">an</span><span class="p">)</span>
-  <span class="n">cari2</span> <span class="o">=</span> <span class="n">dequeue</span><span class="p">(</span><span class="n">an</span><span class="p">)</span>
-  <span class="k">if</span> <span class="n">cari</span> <span class="o">!=</span> <span class="n">target</span><span class="p">:</span>
-    <span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="n">cari</span><span class="p">)</span>
-    <span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="n">cari2</span><span class="p">)</span>
-  <span class="k">else</span><span class="p">:</span>
-    <span class="k">break</span>
-  <span class="n">detik</span> <span class="o">+=</span> <span class="mi">1</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">"detik "</span> <span class="p">,</span> <span class="n">detik</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">"gerbong= "</span><span class="p">,</span> <span class="n">an</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"target ditemukan pada detik: "</span><span class="p">,</span> <span class="n">detik</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="c1"># Ordered List</span>
+<span class="n">head</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">node2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">node3</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">head</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node2</span>
+<span class="n">node2</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node3</span>
+
+
+<span class="c1"># Insert 18</span>
+<span class="n">cari</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">head</span>
+
+
+<span class="k">while</span> <span class="n">temp</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># jika ada</span>
+    <span class="k">if</span> <span class="n">temp</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">cari</span><span class="p">:</span>
+        <span class="c1"># sisipkan setelah yang dicari</span>
+        <span class="n">baru</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+        <span class="n">baru</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+        <span class="n">temp</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">baru</span>
+
+        <span class="k">break</span>
+
+    <span class="c1"># lebih besar berhenti</span>
+    <span class="k">elif</span> <span class="n">temp</span><span class="o">.</span><span class="n">data</span> <span class="o">&gt;</span> <span class="n">cari</span><span class="p">:</span>
+        <span class="k">break</span>
+        
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+
+<span class="c1"># Tampilkan hasil</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">head</span>
+
+<span class="k">while</span> <span class="n">temp</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">temp</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" --&gt; "</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"None"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7653,44 +7748,78 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>detik  1
-gerbong=  ['C', 'D', 'E', 'A', 'B']
-detik  2
-gerbong=  ['E', 'A', 'B', 'C', 'D']
-detik  3
-gerbong=  ['B', 'C', 'D', 'E', 'A']
-detik  4
-gerbong=  ['D', 'E', 'A', 'B', 'C']
-target ditemukan pada detik:  4
+<pre>7 --&gt; 18 --&gt; 18 --&gt; 20 --&gt; None
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4de55671-bb9e-467b-8016-eb51884edc00">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="2)-tidak-ada---%3E-disisipkan-sebelumnya">2) tidak ada --&gt; disisipkan sebelumnya<a class="anchor-link" href="#2)-tidak-ada---%3E-disisipkan-sebelumnya">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ae4d7f02-dc44-48ce-8bb8-dc11420414e7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#challenge</span>
-<span class="n">an</span> <span class="o">=</span> <span class="n">queue</span><span class="p">()</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="s2">"Irma"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="s2">"Annisatul"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="s2">"Jannah"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="s2">"Fifi"</span><span class="p">)</span>
-<span class="n">enqueue</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="s2">"Rohmatul"</span><span class="p">)</span>
-<span class="n">menit</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="n">tahap</span> <span class="o">=</span> <span class="n">menit</span><span class="o">//</span><span class="mi">20</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tahap</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-  <span class="n">n</span> <span class="o">=</span> <span class="n">dequeue</span><span class="p">(</span><span class="n">an</span><span class="p">)</span>
-  <span class="k">if</span> <span class="ow">not</span> <span class="n">isEmpty</span><span class="p">(</span><span class="n">an</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">n</span>
-  <span class="k">else</span><span class="p">:</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s2">"kosong"</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"yang di layani sekaranag adalah "</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="p">:</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="c1"># Ordered List</span>
+<span class="n">head</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">node2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">node3</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">head</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node2</span>
+<span class="n">node2</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node3</span>
+
+
+<span class="c1"># Insert 18</span>
+<span class="n">cari</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">baru</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">cari</span><span class="p">)</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">head</span>
+<span class="n">previous</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="k">while</span> <span class="n">temp</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># jika lebih besar berhenti</span>
+    <span class="k">if</span> <span class="n">temp</span><span class="o">.</span><span class="n">data</span> <span class="o">&gt;</span> <span class="n">cari</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">previous</span> <span class="o">=</span> <span class="n">temp</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+
+
+<span class="c1"># disisipkan sebelumnya</span>
+<span class="k">if</span> <span class="n">previous</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">baru</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">baru</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">baru</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span>
+    <span class="n">previous</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">baru</span>
+
+
+<span class="c1"># Tampilkan hasil</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">head</span>
+<span class="k">while</span> <span class="n">temp</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">temp</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" --&gt; "</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"None"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7703,8 +7832,7 @@ target ditemukan pada detik:  4
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>30
-yang di layani sekaranag adalah  Annisatul
+<pre>7 --&gt; 10 --&gt; 18 --&gt; 20 --&gt; None
 </pre>
 </div>
 </div>

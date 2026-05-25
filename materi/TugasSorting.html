@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>240411100014_Hashing</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>TugasSorting</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7511,31 +7511,17 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f190b083-9249-4f2b-9f64-c028911744e3">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0cf3fbed-e802-4f6c-92e2-abd4650bc02b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="1.-Close-Address-(Chaining)---%3E-CRU-(Cari-diganti-dengan-yang-baru)-(cari-di-delete)">1. Close Address (Chaining) --&gt; CRU (Cari diganti dengan yang baru) (cari di delete)<a class="anchor-link" href="#1.-Close-Address-(Chaining)---%3E-CRU-(Cari-diganti-dengan-yang-baru)-(cari-di-delete)">¶</a></h1><ul>
-<li>ppt</li>
-<li><a href="https://www.geeksforgeeks.org/dsa/c-program-hashing-chaining/">https://www.geeksforgeeks.org/dsa/c-program-hashing-chaining/</a></li>
-</ul>
+<h1 id="Waktu-yang-diperlukan-untuk-mengurutkan-100-500-data-dari-Bubble-Sort,-Selection-Sort,-Insertion-Sort,-Merge-Sort-dan-Quick-Sort-untuk-urutan-ascending">Waktu yang diperlukan untuk mengurutkan 100-500 data dari Bubble Sort, Selection Sort, Insertion Sort, Merge Sort dan Quick Sort untuk urutan ascending<a class="anchor-link" href="#Waktu-yang-diperlukan-untuk-mengurutkan-100-500-data-dari-Bubble-Sort,-Selection-Sort,-Insertion-Sort,-Merge-Sort-dan-Quick-Sort-untuk-urutan-ascending">¶</a></h1>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9c50e0c4-e14d-4032-aee0-658063d17ade">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Closed hashing adalah metode di mana seluruh data menetap di dalam tabel, dan jika ada benturan, data tersebut akan "menumpang" di slot lain yang masih tersedia di tabel yang sama.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e19de7b2-518e-4733-8d4e-c542100c2225">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=65989d5d-0d38-4794-af24-584285042ec4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7543,53 +7529,137 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">hash_func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">11</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="n">table</span><span class="p">[</span><span class="n">hash_func</span><span class="p">(</span><span class="n">key</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="c1"># Bubble Sort</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">bubbleSort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="n">hash_func</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">old_key</span><span class="p">,</span> <span class="n">new_key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="n">hash_func</span><span class="p">(</span><span class="n">old_key</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">old_key</span> <span class="ow">in</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">old_key</span><span class="p">)</span>
-        <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_key</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
+<span class="c1"># Selection Sort</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
+        <span class="n">minIndex</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]:</span>
+                <span class="n">minIndex</span> <span class="o">=</span> <span class="n">j</span>
+        <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">minIndex</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="n">hash_func</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
-        <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="c1"># Insertion Sort</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">insertionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">key</span><span class="p">:</span>
+            <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"awal:"</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-    <span class="n">insert</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="c1"># Merge Sort</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">tengah</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="n">kiri</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:</span><span class="n">tengah</span><span class="p">]</span>
+        <span class="n">kanan</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">tengah</span><span class="p">:]</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">kiri</span><span class="p">)</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">kanan</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"setelah insert:"</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">--- SEARCH ---"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Cari 77:"</span><span class="p">,</span> <span class="n">search</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="mi">77</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Cari 100:"</span><span class="p">,</span> <span class="n">search</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">kiri</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">kanan</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">kiri</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">kanan</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">kiri</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">kanan</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">--- UPDATE ---"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Update 77 -&gt; 99:"</span><span class="p">,</span> <span class="n">update</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"hasil:"</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">kiri</span><span class="p">):</span>
+            <span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">kiri</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">--- DELETE ---"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Hapus 31:"</span><span class="p">,</span> <span class="n">delete</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="mi">31</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"hasil:"</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">kanan</span><span class="p">):</span>
+            <span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">kanan</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="c1"># Quick Sort</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">partition</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+    <span class="n">pivot</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">low</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">pivot</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">:</span>
+        <span class="n">pi</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+        <span class="n">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">pi</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">pi</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+
+
+<span class="c1"># Jumlah data 100 - 500</span>
+<span class="k">for</span> <span class="n">jumlah</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">501</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span> <span class="n">jumlah</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Jumlah Data ="</span><span class="p">,</span> <span class="n">jumlah</span><span class="p">)</span>
+
+    <span class="c1"># Bubble Sort</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">bubbleSort</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Bubble Sort    :"</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">,</span> <span class="s2">"detik"</span><span class="p">)</span>
+
+
+    <span class="c1"># Selection Sort</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Selection Sort :"</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">,</span> <span class="s2">"detik"</span><span class="p">)</span>
+    <span class="c1"># Insertion Sort</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">insertionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Insertion Sort :"</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">,</span> <span class="s2">"detik"</span><span class="p">)</span>
+
+
+    <span class="c1"># Merge Sort</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Merge Sort     :"</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">,</span> <span class="s2">"detik"</span><span class="p">)</span>
+
+
+    <span class="c1"># Quick Sort</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Quick Sort     :"</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">,</span> <span class="s2">"detik"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7602,280 +7672,42 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>awal: [[], [], [], [], [], [], [], [], [], [], []]
-setelah insert: [[77, 44, 55], [], [], [], [26], [93], [17], [], [], [31, 20], [54]]
+<pre>
+Jumlah Data = 100
+Bubble Sort    : 0.0009522438049316406 detik
+Selection Sort : 0.0004971027374267578 detik
+Insertion Sort : 0.0004436969757080078 detik
+Merge Sort     : 0.0002982616424560547 detik
+Quick Sort     : 0.00016570091247558594 detik
 
---- SEARCH ---
-Cari 77: True
-Cari 100: False
+Jumlah Data = 200
+Bubble Sort    : 0.0048372745513916016 detik
+Selection Sort : 0.0021104812622070312 detik
+Insertion Sort : 0.0019297599792480469 detik
+Merge Sort     : 0.0007872581481933594 detik
+Quick Sort     : 0.0008053779602050781 detik
 
---- UPDATE ---
-Update 77 -&gt; 99: True
-hasil: [[99, 44, 55], [], [], [], [26], [93], [17], [], [], [31, 20], [54]]
+Jumlah Data = 300
+Bubble Sort    : 0.0071697235107421875 detik
+Selection Sort : 0.004147052764892578 detik
+Insertion Sort : 0.003419637680053711 detik
+Merge Sort     : 0.0012972354888916016 detik
+Quick Sort     : 0.0005893707275390625 detik
 
---- DELETE ---
-Hapus 31: True
-hasil: [[99, 44, 55], [], [], [], [26], [93], [17], [], [], [20], [54]]
+Jumlah Data = 400
+Bubble Sort    : 0.014675617218017578 detik
+Selection Sort : 0.00683903694152832 detik
+Insertion Sort : 0.005360603332519531 detik
+Merge Sort     : 0.0010266304016113281 detik
+Quick Sort     : 0.0007755756378173828 detik
+
+Jumlah Data = 500
+Bubble Sort    : 0.020753860473632812 detik
+Selection Sort : 0.00954127311706543 detik
+Insertion Sort : 0.009691953659057617 detik
+Merge Sort     : 0.0025947093963623047 detik
+Quick Sort     : 0.0010445117950439453 detik
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3cecfc76-61c7-42bb-b58c-47e94bbc90f2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="2.-Open-Address">2. Open Address<a class="anchor-link" href="#2.-Open-Address">¶</a></h1><ul>
-<li>CRUD --&gt; Linear Probing</li>
-<li>CRUD--&gt; Quadratic Probing</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1afe4f94-bda0-4f52-bb61-5afe45e48296">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="mi">11</span>
-<span class="n">DELETED</span> <span class="o">=</span> <span class="s2">"&lt;deleted&gt;"</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">hash</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">11</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-    <span class="k">while</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">!=</span> <span class="n">DELETED</span><span class="p">:</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">11</span>
-
-    <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-    <span class="k">while</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">11</span>
-
-    <span class="k">return</span> <span class="kc">False</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">old_key</span><span class="p">,</span> <span class="n">new_key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">old_key</span><span class="p">)</span>
-
-    <span class="k">while</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">old_key</span><span class="p">:</span>
-            <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_key</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">11</span>
-
-    <span class="k">return</span> <span class="kc">False</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-    <span class="k">while</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
-            <span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">DELETED</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">11</span>
-
-    <span class="k">return</span> <span class="kc">False</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">44</span><span class="p">]</span>
-
-<span class="c1"># INSERT</span>
-<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-    <span class="n">insert</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Setelah insert:"</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
-
-<span class="c1"># SEARCH</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Search 77:"</span><span class="p">,</span> <span class="n">search</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="mi">77</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Search 100:"</span><span class="p">,</span> <span class="n">search</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
-
-<span class="c1"># UPDATE</span>
-<span class="n">update</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Setelah update 77 -&gt; 99:"</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
-
-<span class="c1"># DELETE</span>
-<span class="n">delete</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="mi">26</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Setelah delete 26:"</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Setelah insert: [77, 44, None, None, 26, 93, 17, None, None, 31, 54]
-Search 77: True
-Search 100: False
-Setelah update 77 -&gt; 99: [99, 44, None, None, 26, 93, 17, None, None, 31, 54]
-Setelah delete 26: [99, 44, None, None, '&lt;deleted&gt;', 93, 17, None, None, 31, 54]
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=370ce422-fccd-4317-9730-7241a83c0079">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">SIZE</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">DELETED</span> <span class="o">=</span> <span class="s2">"&lt;deleted&gt;"</span>
-
-<span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">SIZE</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">hash</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="n">SIZE</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">SIZE</span><span class="p">):</span>
-        <span class="n">new_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">SIZE</span>
-
-        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="o">==</span> <span class="n">DELETED</span><span class="p">:</span>
-            <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
-            <span class="k">return</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Gagal insert:"</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">SIZE</span><span class="p">):</span>
-        <span class="n">new_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">SIZE</span>
-
-        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-
-    <span class="k">return</span> <span class="kc">False</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">old_key</span><span class="p">,</span> <span class="n">new_key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">old_key</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">SIZE</span><span class="p">):</span>
-        <span class="n">new_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">SIZE</span>
-
-        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="o">==</span> <span class="n">old_key</span><span class="p">:</span>
-            <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_key</span>
-            <span class="k">return</span> <span class="kc">True</span>
-
-    <span class="k">return</span> <span class="kc">False</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">SIZE</span><span class="p">):</span>
-        <span class="n">new_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">SIZE</span>
-
-        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
-            <span class="n">table</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">DELETED</span>
-            <span class="k">return</span> <span class="kc">True</span>
-
-    <span class="k">return</span> <span class="kc">False</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">44</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-    <span class="n">insert</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"QUADRATIC:"</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Gagal insert: 44
-QUADRATIC: [77, None, 93, 17, 31, 54, 26]
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d238268a-d163-447d-ba4e-a61ed36969e2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="3.-MidSquareMethod(Function-Hash)">3. MidSquareMethod(Function Hash)<a class="anchor-link" href="#3.-MidSquareMethod(Function-Hash)">¶</a></h1>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=91e32416-8b04-4cdc-a8f6-1f7755de366b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">midFunction</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">table_size</span><span class="p">):</span>
-    <span class="n">square</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
-
-    <span class="n">midInd</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">square</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">square</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="n">midVal</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">square</span><span class="p">)</span>
-
-    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">square</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">midVal</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">square</span><span class="p">[</span><span class="n">midInd</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span> <span class="n">midInd</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
-
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">midVal</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">square</span><span class="p">[</span><span class="n">midInd</span><span class="p">])</span>
-
-    <span class="k">return</span> <span class="n">midVal</span> <span class="o">%</span> <span class="n">table_size</span>
-
-<span class="n">midFunction</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>4</pre>
 </div>
 </div>
 </div>

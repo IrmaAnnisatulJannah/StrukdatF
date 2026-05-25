@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PraktikumPertemuan6</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>TugasHashingSorting</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7510,154 +7510,113 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a8a0a2c3-6638-407b-aa7f-c5877ed26541">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="1.-Close-Address-(Chaining)--%3E-CRU(cari-diganti-dengan-yang-baru)D(cari-di-delete)">1. Close Address (Chaining)--&gt; CRU(cari diganti dengan yang baru)D(cari di delete)<a class="anchor-link" href="#1.-Close-Address-(Chaining)--%3E-CRU(cari-diganti-dengan-yang-baru)D(cari-di-delete)">¶</a></h1><ul>
+<li>ppt</li>
+<li><ul>
+<li><a href="https://www.geeksforgeeks.org/dsa/c-program-hashing-chaining/">https://www.geeksforgeeks.org/dsa/c-program-hashing-chaining/</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1f5afb4c-62e6-445c-9ba2-e9582f69683b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#tidak terurut</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">un</span><span class="p">(</span><span class="n">listdata</span><span class="p">,</span> <span class="n">cari</span><span class="p">):</span>
-  <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="n">found</span> <span class="o">=</span> <span class="kc">False</span>
-  <span class="k">while</span> <span class="n">index</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">listdata</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">cari</span> <span class="o">==</span> <span class="n">listdata</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
-      <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-      <span class="n">index</span> <span class="o">=</span> <span class="n">index</span><span class="o">+</span><span class="mi">1</span>
-  <span class="k">return</span> <span class="n">found</span>
-<span class="n">dd</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">un</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>False</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#data terurut</span>
-<span class="c1">#kondisi akan otomatis berhenti ketika data yang kita cari lebih besar dari yang kita cari, jadi kita gaperlu nyari ke belakang tadi</span>
-<span class="c1">#tidak terurut</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">un</span><span class="p">(</span><span class="n">listdata</span><span class="p">,</span> <span class="n">cari</span><span class="p">):</span>
-  <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="n">found</span> <span class="o">=</span> <span class="kc">False</span>
-  <span class="n">stop</span> <span class="o">=</span>  <span class="kc">False</span>
-  <span class="k">while</span> <span class="n">index</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">listdata</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">found</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">stop</span><span class="p">:</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Hashing Chaining (Close Address)</span>
 
-    <span class="k">if</span> <span class="n">cari</span> <span class="o">==</span> <span class="n">listdata</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
-      <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-      <span class="k">if</span> <span class="n">listdata</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">cari</span><span class="p">:</span>
-        <span class="n">stop</span> <span class="o">=</span> <span class="kc">True</span>
-      <span class="k">else</span><span class="p">:</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="n">index</span><span class="o">+</span><span class="mi">1</span>
-  <span class="k">return</span> <span class="n">found</span>
-<span class="n">dd</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">un</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>True</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#binary search</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">bin</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">search</span><span class="p">):</span>
-  <span class="n">awal</span> <span class="o">=</span> <span class="mi">3</span>
-  <span class="n">akhir</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
-  <span class="n">found</span> <span class="o">=</span> <span class="kc">False</span>
-  <span class="k">while</span> <span class="n">awal</span> <span class="o">&lt;=</span> <span class="n">akhir</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
-    <span class="n">tengah</span> <span class="o">=</span> <span class="p">(</span><span class="n">awal</span> <span class="o">+</span> <span class="n">akhir</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
-    <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">tengah</span><span class="p">]</span> <span class="o">==</span> <span class="n">search</span><span class="p">:</span>
-      <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-      <span class="k">if</span> <span class="n">search</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="n">tengah</span><span class="p">]:</span>
-        <span class="n">akhir</span> <span class="o">=</span> <span class="n">tengah</span><span class="o">-</span><span class="mi">1</span>
-      <span class="k">else</span><span class="p">:</span>
-        <span class="n">awal</span> <span class="o">=</span>  <span class="n">tengah</span><span class="o">+</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="n">found</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">HashTable</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>True
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#cl</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">cari</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
 
-<span class="n">indexList</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">cari</span><span class="p">:</span>
-        <span class="n">indexList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">indexList</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Data tidak ditemukan"</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Index Kemunculan:"</span><span class="p">,</span> <span class="n">indexList</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Jumlah Kemunculan:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">indexList</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Index Pertama:"</span><span class="p">,</span> <span class="n">indexList</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Index Terakhir"</span><span class="p">,</span> <span class="n">indexList</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">hashFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">key</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span>
+
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"berhasil ditambahkan"</span><span class="p">)</span>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"ditemukan"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"tidak ditemukan"</span><span class="p">)</span>
+
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">):</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hashFunction</span><span class="p">(</span><span class="n">old</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">old</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
+            <span class="n">posisi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">old</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">posisi</span><span class="p">]</span> <span class="o">=</span> <span class="n">new</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="s2">"diganti menjadi"</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="s2">"tidak ditemukan"</span><span class="p">)</span>
+
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"berhasil dihapus"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"tidak ditemukan"</span><span class="p">)</span>
+
+    <span class="c1"># menampilkan hash table</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Isi Hash Table:"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">":"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+
+
+<span class="n">h</span> <span class="o">=</span> <span class="n">HashTable</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="c1"># create</span>
+<span class="n">h</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">h</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">h</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">h</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">h</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+
+<span class="n">h</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+
+<span class="c1"># search</span>
+<span class="n">h</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">h</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># update</span>
+<span class="n">h</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+
+<span class="n">h</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+
+<span class="c1"># delete</span>
+<span class="n">h</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">h</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -7670,82 +7629,521 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Index Kemunculan: [1, 7, 9]
-Jumlah Kemunculan: 3
-Index Pertama: 1
-Index Terakhir 9
+<pre>10 berhasil ditambahkan
+20 berhasil ditambahkan
+15 berhasil ditambahkan
+7 berhasil ditambahkan
+32 berhasil ditambahkan
+
+Isi Hash Table:
+0 : [7]
+1 : [15]
+2 : []
+3 : [10]
+4 : [32]
+5 : []
+6 : [20]
+15 ditemukan
+100 tidak ditemukan
+20 diganti menjadi 25
+
+Isi Hash Table:
+0 : [7]
+1 : [15]
+2 : []
+3 : [10]
+4 : [32]
+5 : []
+6 : [25]
+15 berhasil dihapus
+
+Isi Hash Table:
+0 : [7]
+1 : []
+2 : []
+3 : [10]
+4 : [32]
+5 : []
+6 : [25]
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6a5c76eb-a801-43e1-91ab-cb6aba727a77">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="2-Open-Address-:-2Fungsi-hash-(Biasa-dan-Mid-Square-Method)">2 Open Address : 2Fungsi hash (Biasa dan Mid Square Method)<a class="anchor-link" href="#2-Open-Address-:-2Fungsi-hash-(Biasa-dan-Mid-Square-Method)">¶</a></h1><ul>
+<li>CRUD--&gt; Linear Probbing</li>
+<li>CRUD--&gt; Quadratic Probing</li>
+<li>Create (Insert) Load Factor &lt; 1  -&gt; kasih contoh yang penuh</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2974160e-1221-4ee9-93a2-44b343124b43">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">modif</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">search</span><span class="p">):</span>
-  <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="n">found</span><span class="o">=</span> <span class="kc">False</span>
-  <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">data</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">cari</span><span class="p">:</span>
-      <span class="n">index</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-      <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#cl</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">binrek</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">kanan</span><span class="p">,</span> <span class="n">kiri</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-    <span class="n">proses</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="n">target</span> <span class="o">=</span> <span class="mi">56</span>
-    <span class="n">kiri</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">kanan</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-        <span class="k">while</span> <span class="n">data</span> <span class="o">&lt;=</span> <span class="n">target</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Linear Probing</span>
+
+<span class="n">size</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">hashTable</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">size</span>
 
 
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mf">18.25</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">78</span><span class="p">]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">key</span> <span class="o">%</span> <span class="n">size</span>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+    <span class="n">awal</span> <span class="o">=</span> <span class="n">index</span>
+
+    <span class="k">while</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span>
+
+        <span class="c1"># tabel penuh</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="n">awal</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Hash Table Penuh"</span><span class="p">)</span>
+            <span class="k">return</span>
+
+    <span class="n">hashTable</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"berhasil dimasukkan"</span><span class="p">)</span>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="n">awal</span> <span class="o">=</span> <span class="n">index</span>
+
+    <span class="k">while</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"ditemukan di index"</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="n">awal</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"tidak ditemukan"</span><span class="p">)</span>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">hashFunction</span><span class="p">(</span><span class="n">old</span><span class="p">)</span>
+    <span class="n">awal</span> <span class="o">=</span> <span class="n">index</span>
+
+    <span class="k">while</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">old</span><span class="p">:</span>
+            <span class="n">hashTable</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">new</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="s2">"diganti menjadi"</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="n">awal</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="s2">"tidak ditemukan"</span><span class="p">)</span>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="n">awal</span> <span class="o">=</span> <span class="n">index</span>
+
+    <span class="k">while</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+            <span class="n">hashTable</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"berhasil dihapus"</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="n">awal</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"tidak ditemukan"</span><span class="p">)</span>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Isi Hash Table"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+
+<span class="c1"># INSERT</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">31</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">38</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>
+
+<span class="c1"># contoh penuh</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">()</span>
+
+<span class="c1"># search</span>
+<span class="n">search</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+
+<span class="c1"># update</span>
+<span class="n">update</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">()</span>
+
+<span class="c1"># delete</span>
+<span class="n">delete</span><span class="p">(</span><span class="mi">31</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>10 berhasil dimasukkan
+17 berhasil dimasukkan
+24 berhasil dimasukkan
+31 berhasil dimasukkan
+38 berhasil dimasukkan
+45 berhasil dimasukkan
+52 berhasil dimasukkan
+Hash Table Penuh
+
+Isi Hash Table
+0 : 38
+1 : 45
+2 : 52
+3 : 10
+4 : 17
+5 : 24
+6 : 31
+24 ditemukan di index 5
+24 diganti menjadi 99
+
+Isi Hash Table
+0 : 38
+1 : 45
+2 : 52
+3 : 10
+4 : 17
+5 : 99
+6 : 31
+31 berhasil dihapus
+
+Isi Hash Table
+0 : 38
+1 : 45
+2 : 52
+3 : 10
+4 : 17
+5 : 99
+6 : None
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bdee671c-c6dd-45e5-b4b4-6d2c0b850f07">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">inmon</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dd</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">):</span>
-  <span class="k">if</span> <span class="n">first</span> <span class="o">&gt;</span> <span class="n">last</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"data tidak ditemukan"</span><span class="p">)</span>
-    <span class="n">tengah</span> <span class="o">=</span> <span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">last</span><span class="p">)</span><span class="o">//</span> <span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"cek index ke - </span><span class="si">{</span><span class="n">tengah</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">dd</span><span class="p">[</span><span class="n">tengah</span><span class="p">]</span> <span class="o">==</span> <span class="n">data</span><span class="p">:</span>
-      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"data tidak ditemukan pada index</span><span class="si">{</span><span class="n">tengah</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">dd</span> <span class="o">&gt;</span> <span class="n">data</span><span class="p">[</span><span class="n">tengah</span><span class="p">]:</span>
-      <span class="n">inmon</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dd</span><span class="p">,</span> <span class="n">tengah</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">last</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">data</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">:</span>
-      <span class="n">inmon</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dd</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">tengah</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mf">18.25</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">78</span><span class="p">]</span>
-  <span class="n">inmon</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Quadratic Probing</span>
+
+<span class="n">size</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">hashTable</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">size</span>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">key</span> <span class="o">%</span> <span class="n">size</span>
+
+
+<span class="c1"># create</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="n">hashTable</span><span class="p">[(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># tabel penuh</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">size</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Hash Table Penuh"</span><span class="p">)</span>
+            <span class="k">return</span>
+
+    <span class="n">newIndex</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span>
+    <span class="n">hashTable</span><span class="p">[</span><span class="n">newIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"berhasil dimasukkan"</span><span class="p">)</span>
+
+
+<span class="c1"># search </span>
+<span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="n">hashTable</span><span class="p">[(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="n">newIndex</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span>
+
+        <span class="k">if</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">newIndex</span><span class="p">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"ditemukan di index"</span><span class="p">,</span> <span class="n">newIndex</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">size</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"tidak ditemukan"</span><span class="p">)</span>
+
+
+<span class="c1"># update</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">hashFunction</span><span class="p">(</span><span class="n">old</span><span class="p">)</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="n">hashTable</span><span class="p">[(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="n">newIndex</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span>
+
+        <span class="k">if</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">newIndex</span><span class="p">]</span> <span class="o">==</span> <span class="n">old</span><span class="p">:</span>
+            <span class="n">hashTable</span><span class="p">[</span><span class="n">newIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">new</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="s2">"diganti menjadi"</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">size</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="s2">"tidak ditemukan"</span><span class="p">)</span>
+
+
+<span class="c1"># delete</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="n">hashTable</span><span class="p">[(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="n">newIndex</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span>
+
+        <span class="k">if</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">newIndex</span><span class="p">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+            <span class="n">hashTable</span><span class="p">[</span><span class="n">newIndex</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"berhasil dihapus"</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">size</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">"tidak ditemukan"</span><span class="p">)</span>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Isi Hash Table"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">hashTable</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+
+<span class="c1"># insert</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">31</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">38</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>
+
+<span class="c1"># contoh penuh</span>
+<span class="n">insert</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">()</span>
+<span class="n">search</span><span class="p">(</span><span class="mi">38</span><span class="p">)</span>
+<span class="n">update</span><span class="p">(</span><span class="mi">38</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">display</span><span class="p">()</span>
+
+
+<span class="n">delete</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">display</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>10 berhasil dimasukkan
+17 berhasil dimasukkan
+24 berhasil dimasukkan
+31 berhasil dimasukkan
+Hash Table Penuh
+Hash Table Penuh
+Hash Table Penuh
+60 berhasil dimasukkan
+
+Isi Hash Table
+0 : 24
+1 : 60
+2 : None
+3 : 10
+4 : 17
+5 : 31
+6 : None
+38 tidak ditemukan
+38 tidak ditemukan
+
+Isi Hash Table
+0 : 24
+1 : 60
+2 : None
+3 : 10
+4 : 17
+5 : 31
+6 : None
+24 berhasil dihapus
+
+Isi Hash Table
+0 : None
+1 : 60
+2 : None
+3 : 10
+4 : 17
+5 : 31
+6 : None
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=852b14f4-ce76-4d83-a7e3-d76cd66913fb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="3-MidSquareMethod(Function-Hash)">3 MidSquareMethod(Function Hash)<a class="anchor-link" href="#3-MidSquareMethod(Function-Hash)">¶</a></h1><p>Tugas : Ditambahkan yang belum</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=16a003ed-4935-48d9-94c6-ad0c63188573">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">size</span> <span class="o">=</span> <span class="mi">10</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">hashFunction</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="c1"># key dikuadratkan</span>
+    <span class="n">kuadrat</span> <span class="o">=</span> <span class="n">key</span> <span class="o">*</span> <span class="n">key</span>
+
+    <span class="c1"># ubah menjadi string</span>
+    <span class="n">angka</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">kuadrat</span><span class="p">)</span>
+
+    <span class="c1"># ambil digit tengah</span>
+    <span class="n">tengah</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">angka</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+
+    <span class="c1"># jika digit ganjil</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">angka</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">nilaiTengah</span> <span class="o">=</span> <span class="n">angka</span><span class="p">[</span><span class="n">tengah</span><span class="p">]</span>
+
+    <span class="c1"># jika digit genap</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">nilaiTengah</span> <span class="o">=</span> <span class="n">angka</span><span class="p">[</span><span class="n">tengah</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">tengah</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># dijadikan index hash</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">nilaiTengah</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span>
+
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">56</span><span class="p">]</span>
+
+
+<span class="c1"># proses</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Key        :"</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Kuadrat    :"</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hash Value :"</span><span class="p">,</span> <span class="n">hashFunction</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Key        : 12
+Kuadrat    : 144
+Hash Value : 4
+
+Key        : 25
+Kuadrat    : 625
+Hash Value : 2
+
+Key        : 37
+Kuadrat    : 1369
+Hash Value : 6
+
+Key        : 44
+Kuadrat    : 1936
+Hash Value : 3
+
+Key        : 56
+Kuadrat    : 3136
+Hash Value : 3
+
+</pre>
 </div>
 </div>
 </div>
